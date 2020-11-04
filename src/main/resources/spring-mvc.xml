@@ -60,8 +60,8 @@
     <!-- 跳转文件的前后缀 -->
     <bean
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/"></property>
-        <property name="suffix" value=".jsp"></property>
+        <property name="prefix" value="/WEB-INF/view/"></property>
+        <property name="suffix" value=".html"></property>
     </bean>
 
      <!-- 登陆拦截器 -->  

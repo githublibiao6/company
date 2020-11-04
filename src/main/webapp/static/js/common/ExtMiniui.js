@@ -216,7 +216,7 @@ var M1 = M1 || {};
 							top.location.href = ContextPath
 							+ "/LogonDialog.jsp";
 						})*/
-						top.location.href = ContextPath+ "/sessionNull.jsp";
+						top.location.href = ContextPath+ "/sessionNull.html";
 					}else{
 						tz.alert(dto.message);
 					}
@@ -386,7 +386,7 @@ var M1 = M1 || {};
 									top.location.href = ContextPath
 									+ "/LogonDialog.jsp";
 								})*/
-								top.location.href = ContextPath+ "/sessionNull.jsp";
+								top.location.href = ContextPath+ "/sessionNull.html";
 							}else{
 								tz.alert(data_.message);
 							}

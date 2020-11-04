@@ -70,7 +70,7 @@ public class AdminController extends GlobalController {
                 System.out.println("*********************错误信息结束********************************");
             }
         }
-        return "/WEB-INF/login.jsp";
+        return "/WEB-INF/login.html";
     }
 
     /**
