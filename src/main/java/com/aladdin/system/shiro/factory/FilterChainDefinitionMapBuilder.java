@@ -13,6 +13,7 @@ public class FilterChainDefinitionMapBuilder {
         map.put("/api/*.do", "anon");
         map.put("/login.html", "anon");
         map.put("/static/**", "anon");
+        map.put("/resources/**", "anon");
         map.put("/system/menu.do", "anon");
         map.put("/system/user.do", "anon");
         map.put("/system/logout.do", "logout");

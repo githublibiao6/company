@@ -40,10 +40,10 @@
         <setting name="callSettersOnNulls" value="true"/>
     </settings>
 
-        <!-- 分页插件 -->
+    <!-- 分页插件 -->
     <plugins>
         <plugin interceptor="com.github.pagehelper.PageHelper">
-            <property name="dialect" value="${DBType}"/>
+            <property name="dialect" value="${dbType}"/>
         </plugin>
     </plugins>
 </configuration>

@@ -12,7 +12,7 @@
       http://www.springframework.org/schema/context
       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <context:property-placeholder location="classpath:redis.properties"/>
+    <context:property-placeholder location="classpath*:redis.properties"/>
     <!--设置数据池-->
     <bean id="poolConfig"  class="redis.clients.jedis.JedisPoolConfig">
         <property name="maxIdle" value="${redis.maxIdle}"></property>

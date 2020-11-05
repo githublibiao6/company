@@ -320,9 +320,27 @@
         </dependency>
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>product</id>
+            <properties>
+                <env>product</env>
+            </properties>
+        </profile>
+        <profile>
+            <id>local</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <env>local</env>
+            </properties>
+        </profile>
+    </profiles>
     <build>
         <finalName>company</finalName>
         <resources>
+            <!-- mapper -->
             <resource>
                 <directory>src/main/java</directory>
                 <includes>
@@ -330,8 +348,18 @@
                 </includes>
                 <filtering>false</filtering>
             </resource>
+            <!-- 配置文件 -->
             <resource>
                 <directory>src/main/resources</directory>
+                <includes>
+                    <include>*.xml</include>
+                    <include>*.properties</include>
+                    <include>*.ini</include>
+                </includes>
+            </resource>
+            <!-- 环境配置文件 -->
+            <resource>
+                <directory>src/main/resources/${profiles.active}</directory>
                 <includes>
                     <include>*.xml</include>
                     <include>*.properties</include>

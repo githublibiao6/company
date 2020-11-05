@@ -18,10 +18,10 @@
     <!-- 配置数据库连接池 -->
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
         destroy-method="close">
-        <property name="driverClassName" value="${${DBType}.driver}" />
-        <property name="url" value="${${DBType}.url}" />
-        <property name="username" value="${${DBType}.username}" />
-        <property name="password" value="${${DBType}.password}" />
+        <property name="driverClassName" value="${${dbType}.driver}" />
+        <property name="url" value="${${dbType}.url}" />
+        <property name="username" value="${${dbType}.username}" />
+        <property name="password" value="${${dbType}.password}" />
         <!-- 初始化连接大小 -->
         <property name="initialSize" value="${initialSize}" />
         <!-- 连接池的最大值，同一时间可以从池分配的最多连接数量，0时无限制 默认值是8 -->
