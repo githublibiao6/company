@@ -19,6 +19,7 @@
     http://www.springframework.org/schema/util/spring-util.xsd">
     
     <!-- 引入配置文件 -->
+
     <bean id="propertyConfigurer"
         class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
@@ -29,8 +30,8 @@
             </array>
         </property>
     </bean>
-    <import resource="classpath:spring-redis.xml"/>
-    <import resource="spring-mybatis.xml"/>
+    <import resource="classpath*:spring-redis.xml"/>
+    <import resource="classpath*:spring-mybatis.xml"/>
 <!--    <import resource="rabbitMQ.xml"/>-->
     <!-- 已在web.xml中写入 -->
     <!-- <import resource="classpath:applicationContext-shiro.xml"/> -->

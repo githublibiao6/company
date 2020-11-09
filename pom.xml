@@ -323,18 +323,36 @@
     <profiles>
         <profile>
             <id>product</id>
-            <properties>
-                <env>product</env>
-            </properties>
+            <activation>
+                <property>
+                    <name>product</name>
+                    <value>product</value>
+                </property>
+            </activation>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources/product</directory>
+                    </resource>
+                </resources>
+            </build>
         </profile>
         <profile>
             <id>local</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
+                <property>
+                    <name>local</name>
+                    <value>local</value>
+                </property>
             </activation>
-            <properties>
-                <env>local</env>
-            </properties>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources/local</directory>
+                    </resource>
+                </resources>
+            </build>
         </profile>
     </profiles>
     <build>
@@ -418,8 +436,8 @@
         </plugins>
     </build>
 
-    <properties>     
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>     
+    <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
    </properties>
 </project>
